@@ -12,7 +12,14 @@ atualizadas de todos os artefatos do projeto.
 |---|---|
 | `chamados.py` | Regras de negócio: abrir, buscar, listar e alterar status de chamados |
 | `main.py` | Menu de terminal para usar o sistema |
+| `relatorios.py` | Relatório-resumo por status e prioridade, com os chamados urgentes pendentes |
 | `test_chamados.py` | Testes automatizados (unittest) |
+| `test_relatorios.py` | Testes do relatório |
+
+## Histórico de mudanças
+
+- **v1.0** – Cadastro, listagem e alteração de status de chamados.
+- **v1.1** – Nova funcionalidade: relatório-resumo (opção 4 do menu), solicitada pela gestão de Operações.
 
 ## Como executar
 

@@ -1,6 +1,7 @@
 """Menu de terminal do Sistema de Chamados."""
 
 from chamados import PRIORIDADES_VALIDAS, STATUS_VALIDOS, GerenciadorChamados
+from relatorios import formatar_relatorio
 
 
 def ler_opcao(mensagem, opcoes):
@@ -19,6 +20,7 @@ def main():
         print("1 - Abrir chamado")
         print("2 - Listar chamados")
         print("3 - Alterar status")
+        print("4 - Relatório resumo")
         print("0 - Sair")
         opcao = input("Escolha: ").strip()
 
@@ -39,6 +41,8 @@ def main():
                 id_chamado = int(input("Número do chamado: "))
                 status = ler_opcao("Novo status", STATUS_VALIDOS)
                 print(f"Atualizado: {gerenciador.alterar_status(id_chamado, status)}")
+            elif opcao == "4":
+                print(formatar_relatorio(gerenciador))
             elif opcao == "0":
                 print("Até logo!")
                 break
